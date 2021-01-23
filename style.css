@@ -39,18 +39,24 @@ div {
 
     50% {
         top: 50px;
+        width: 150px;
+        height: 80px;
     }
 
     75% {
-        top: -100px;
+        top: -200px;
+        width: 80px;
     }
 
     90% {
         top: 50px;
+        width: 130px;
+
     }
 
     100% {
         top: 0px;
+        width: 100px;
     }
 }
 
