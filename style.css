@@ -4,23 +4,74 @@ div {
     width: 20%;
     height: 40px;
     border-radius: 5px;
+    position: relative;
 }
 
 #rect {
     animation-name: rainbow;
     animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+#rect:hover {
+    animation-name: inherit;
+    animation-direction: reverse;
+    background-color: yellow;
+}
+
+#ball {
+    position: relative;
+    margin: 50px auto;
+    background: linear-gradient(#24b32462, #ff00ff64, #ff7b00a3);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    75% {
+        top: -100px;
+    }
+
+    90% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0px;
+    }
 }
 
 @keyframes rainbow {
     0% {
         background-color: #0000ff;
+        top: 0px;
     }
 
     50% {
         background-color: #00ff00;
+        top: 50px;
     }
 
     100% {
         background-color: #ffff00;
+        top: 0px;
     }
+}
+
+p {
+    color: maroon;
+    animation-name: inherit;
 }
